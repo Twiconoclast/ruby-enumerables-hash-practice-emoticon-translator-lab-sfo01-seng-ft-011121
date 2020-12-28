@@ -6,6 +6,8 @@ def load_library(hash)
   hash.each do |k, v|
     nhash = {nhash[:english] => v[0],
     nhash[:japanese] => v[1]}
+  end
+  return nhash
 end
 
 def get_japanese_emoticon

@@ -13,7 +13,7 @@ def load_library(file)
   return nhash
 end
 
-def get_japanese_emoticon(emot)
+def get_japanese_emoticon(file, emot)
   english = load_library(file).select {|k, v| v.has_value?(emot)}
   return english
 end

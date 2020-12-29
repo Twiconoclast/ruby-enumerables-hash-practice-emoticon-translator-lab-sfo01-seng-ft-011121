@@ -10,7 +10,7 @@ def load_library(file)
     nhash[k][:english] = v[0]
     nhash[k][:japanese] = v[1]
     
-    phash = phash.merge(nhash[k])
+    phash = phash.merge(nhash)
   end
   return phash
 end

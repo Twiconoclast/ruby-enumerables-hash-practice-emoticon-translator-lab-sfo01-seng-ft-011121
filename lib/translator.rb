@@ -9,7 +9,7 @@ def load_library(file)
     nhash = {}
     nhash = {nhash[:english] = v[0],
     nhash[:japanese] = v[1]}
-    binding.pry
+    
     phash = phash.merge(nhash)
   end
   return phash

@@ -3,12 +3,14 @@ emoticons = YAML.load_file("./lib/emoticons.yml")
 
 def load_library(file)
   emoticons = YAML.load_file(file)
-  nhash = {}
+  phash = {}
   emoticons.each do |k, v|
-    nhash = {k => {nhash[:english] => v[0],
+    nhash = {}
+    nhash = {nhash[:english] => v[0],
     nhash[:japanese] => v[1]}}
+    phash = phash.merge(nhash)
   end
-  return nhash
+  return phash
 end
 
 def get_japanese_emoticon

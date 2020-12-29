@@ -5,12 +5,14 @@ require "pry"
 def load_library(file)
   emoticons = YAML.load_file(file)
   nhash = {}
+  phash = {}
   emoticons.each do |k, v|
     nhash[k] = {}
     nhash[k][:english] = v[0]
     nhash[k][:japanese] = v[1]
+    phash.merge(nhash)
   end
-  return nhash
+  return phash
 end
 
 def get_japanese_emoticon

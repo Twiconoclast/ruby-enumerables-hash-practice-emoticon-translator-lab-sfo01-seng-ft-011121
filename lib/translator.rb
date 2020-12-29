@@ -1,9 +1,9 @@
 require "yaml"
 emoticons = YAML.load_file("./lib/emoticons.yml")
 
-def load_library(./lib/emoticons.yml)
+def load_library(hash)
   nhash = {}
-  ./lib/emoticons.yml.each do |k, v|
+  hash.each do |k, v|
     nhash = k => {nhash[:english] => v[0],
     nhash[:japanese] => v[1]}
   end

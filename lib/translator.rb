@@ -19,6 +19,9 @@ def get_japanese_emoticon(file, emot)
   english.each do |key, value|
       japanese_emot += value[:japanese]
   end
+  if japanese_emot == ""
+    return "Sorry"
+  end
   return japanese_emot
 end
 

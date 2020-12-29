@@ -7,7 +7,7 @@ def load_library(file)
   emoticons.each do |k, v|
     nhash = {}
     nhash = {nhash[:english] => v[0],
-    nhash[:japanese] => v[1]}}
+    nhash[:japanese] => v[1]}
     phash = phash.merge(nhash)
   end
   return phash

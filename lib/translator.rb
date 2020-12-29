@@ -1,5 +1,6 @@
 require "yaml"
 emoticons = YAML.load_file("./lib/emoticons.yml")
+require "pry"
 
 def load_library(file)
   emoticons = YAML.load_file(file)
@@ -8,6 +9,7 @@ def load_library(file)
     nhash = {}
     nhash = {nhash[:english] => v[0],
     nhash[:japanese] => v[1]}
+    binding.pry
     phash = phash.merge(nhash)
   end
   return phash

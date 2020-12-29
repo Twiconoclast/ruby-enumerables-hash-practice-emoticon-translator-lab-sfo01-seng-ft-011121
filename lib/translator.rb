@@ -16,9 +16,9 @@ end
 def get_japanese_emoticon(file, emot)
   english = load_library(file).select {|k, v| v.has_value?(emot)}
   return english
-  # japanese_emot = ""
+  japanese_emot = ""
   english.each do |emotion, hash|
-    return english[emotion][:japanese]
+    japanese_emot += english[emotion][:japanese]
   end
   return japanese_emot
 end

@@ -18,7 +18,7 @@ def get_japanese_emoticon(file, emot)
   return english
   # japanese_emot = ""
   english.each do |emotion, hash|
-    japanese_emot = english[emotion][:japanese]
+    return english[emotion][:japanese]
   end
   return japanese_emot
 end

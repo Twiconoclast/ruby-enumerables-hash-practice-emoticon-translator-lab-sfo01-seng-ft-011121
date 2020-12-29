@@ -15,6 +15,7 @@ end
 
 def get_japanese_emoticon(emot)
   english = load_library(file).select {|k, v| v.has_value?(emot)}
+  return english
 end
 
 def get_english_meaning

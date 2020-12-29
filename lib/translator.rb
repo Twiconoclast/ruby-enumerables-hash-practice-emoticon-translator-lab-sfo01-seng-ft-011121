@@ -15,7 +15,7 @@ end
 
 def get_japanese_emoticon(file, emot)
   english = load_library(file).select {|k, v| v.has_value?(emot)}
-  return english
+
   japanese_emot = english.select {|k, v| v.has_value?(:japanese)}
   return japanese_emot
 end

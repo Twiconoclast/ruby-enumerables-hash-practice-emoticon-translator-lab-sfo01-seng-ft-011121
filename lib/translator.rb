@@ -5,8 +5,8 @@ def load_library(file)
   emoticons = YAML.load_file(file)
   nhash = {}
   emoticons.each do |k, v|
-    nhash = k => {nhash[:english] => v[0],
-    nhash[:japanese] => v[1]}
+    nhash = {emoticons[k] => {nhash[:english] => v[0],
+    nhash[:japanese] => v[1]}}
   end
   return nhash
 end

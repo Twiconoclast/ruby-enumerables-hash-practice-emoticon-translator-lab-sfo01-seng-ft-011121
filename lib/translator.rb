@@ -9,7 +9,6 @@ def load_library(file)
     nhash[k] = {}
     nhash[k][:english] = v[0]
     nhash[k][:japanese] = v[1]
-  
   end
   return nhash
 end
